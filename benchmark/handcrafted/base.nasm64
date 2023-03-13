@@ -1,0 +1,33 @@
+bits 64
+
+SECTION .gadgets.text
+
+gadgets:
+
+.LoadConstG1:
+POP RAX
+RET
+
+.LoadConstG2:
+POP RBX
+RET
+
+.LoadConstG4:
+POP RDX
+RET
+
+.LoadConstG6:
+POP RDI
+RET
+
+.LoadConstG7:
+POP RSI
+RET
+
+.StoreMemG1:
+MOV [RAX], RBX
+RET
+
+.SyscallG:
+SYSCALL
+RET
